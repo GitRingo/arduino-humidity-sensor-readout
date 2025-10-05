@@ -11,7 +11,7 @@ const uint8_t SHT_ADDR = 0x44;
 bool startMeasurement() {
   Wire.beginTransmission(SHT_ADDR);
   Wire.write(0x24);
-  Wire.write(0x00);  // Single Shot, High Repeatability
+  Wire.write(0x00);  
   return (Wire.endTransmission() == 0);
 }
 
